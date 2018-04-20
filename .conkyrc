@@ -1,0 +1,52 @@
+background no
+update_interval 1
+
+override_utf8_locale yes
+
+double_buffer yes
+no_buffers yes
+
+text_buffer_size 2048
+imlib_cache_size 0
+
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorated,sticky,skip_taskbar,skip_pager,below
+
+border_inner_margin 0
+border_outer_margin 0
+maximum_width 1420
+minimum_size 1420 850
+
+
+alignment bl
+gap_x 462  #Vm380, Vr1238, Vl-40, Hr915, Hmr 780 Hbr 900
+gap_y -610  #Vb-520, Vt70 Ht-136, Hb-617, Hmr -240 Hbr -540
+
+draw_shades yes
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+use_xft yes
+xftfont Font Awesome 8:size=12
+xftalpha 0,02
+
+uppercase no
+
+default_color FBFBFB
+	
+	# — Lua Load — #
+	lua_load ~/conky_rings/rings.lua
+	lua_draw_hook_pre ring_stats
+
+
+TEXT
+${font Font Awesome 8:size=10,weight:bold}
+
+${image ~/conky_rings/bg.png -p 220,183}
+${offset 130}${voffset 150}${voffset 1}${offset 31}
+
+
+

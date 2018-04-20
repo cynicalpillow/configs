@@ -1,0 +1,37 @@
+# -- Conky settings by giancarlo64.deviantart.com -- #
+use_xft yes
+xftfont xftfont bahamas:size=6.6
+alignment bl
+gap_x 1245
+gap_y 50
+xftalpha 1
+update_interval 1.0
+maximum_width 305
+minimum_size 305 100
+own_window yes
+own_window_type override
+own_window_transparent false
+own_window_argb_visual yes
+own_window_argb_value 200
+own_window_color FF0000
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+stippled_borders 10
+border_margin 4
+border_width 1
+default_shade_color 000000
+default_outline_color 000000
+default_color bcbcbc
+use_spacer right
+no_buffers yes
+uppercase no
+
+lua_load ~/conky_boxes/clock_rings.lua
+    lua_draw_hook_pre clock_rings
+
+TEXT
+${voffset -10}${image ~/conky_boxes/bo.png -p 5,16}${voffset 35}${offset 120}${font OpenSans:size=12}${time %I:%M:%S %p }${voffset -9}${font}${font OpenSansLight:size=12}${time %d/%m/%g}
+${font}${offset 121}${battery_bar 10,30}${offset 10}${voffset -1}${font OpenSansLight:size=10}${battery}${font}
